@@ -33,7 +33,6 @@ const handleClick = async e => {
     const img = document.createElement('img')
     img.src = meal.strMealThumb
     mealList.append(p, img)
-  
   })
 
 }
