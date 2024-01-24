@@ -1,4 +1,5 @@
 import './style.css'
+import {getCatergoryDishes} from './src/fetch-category'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -19,13 +20,15 @@ document.querySelector('#app').innerHTML = `
 //and then category.html will render all the relevant data/properties for all those category 
 //dishes.
 
-const handleClick = (event) => {
-  console.log(event.target);
+const handleClick = e => {
+    console.log(e.target)
+    const category = e.target.title 
+    getCatergoryDishes(category)
 }
 
 const main = () => {
-  const ul = document.querySelector("ul"); 
-  ul.addEventListener("click", handleClick); 
+  const categoriesList = document.getElementById('categories'); 
+  categoriesList.addEventListener("click", handleClick)
 }
 
 main(); 
