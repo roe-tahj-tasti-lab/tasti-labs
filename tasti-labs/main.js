@@ -21,9 +21,10 @@ document.querySelector('#app').innerHTML = `
 //dishes.
 
 const handleClick = e => {
-    console.log(e.target)
-    const category = e.target.title 
-    getCatergoryDishes(category)
+    console.log(e.target);
+    const category = e.target.title; 
+    getCatergoryDishes(category);
+    location.href = "./category.html";
 }
 
 const main = () => {
