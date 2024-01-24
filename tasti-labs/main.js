@@ -1,5 +1,5 @@
 import './style.css'
-import {getCatergoryDishes} from './src/fetch-category'
+import {getCategoryDishes} from './src/fetch-category'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -20,11 +20,22 @@ document.querySelector('#app').innerHTML = `
 //and then category.html will render all the relevant data/properties for all those category 
 //dishes.
 
-const handleClick = e => {
-    console.log(e.target);
-    const category = e.target.title; 
-    getCatergoryDishes(category);
-    location.href = "./category.html";
+const handleClick = async e => {
+  const category = e.target.title; 
+  const { meals } = await getCategoryDishes(category)
+
+  document.querySelector('#app').style.display = 'none'
+
+  const mealList = document.getElementById('meal-list')
+
+  meals.forEach((meal) => {
+    const p = document.createElement('p').innerText = meal.strMeal
+    const img = document.createElement('img')
+    img.src = meal.strMealThumb
+    mealList.append(p, img)
+  
+  })
+
 }
 
 const main = () => {
