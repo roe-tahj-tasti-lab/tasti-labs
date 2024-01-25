@@ -1,6 +1,7 @@
 import './style.css'
 import {getCategoryDishes} from './src/fetch-category'
-
+import { getDetails } from './src/fetch-details';
+import { renderDishes } from './src/render-category';
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Tasti Labs</h2>
@@ -22,58 +23,12 @@ document.querySelector('#app').innerHTML = `
 
 //when you press category 
 const handleClick = async e => {
-  const category = e.target.title; 
-  const { meals } = await getCategoryDishes(category)
-
-  document.querySelector('#app').style.display = 'none' //clears
-
-  const dishList = document.getElementById('meal-list')
-
-
-
-
-
-  meals.forEach((dish) => {
-    const li = document.createElement('li');
-
-    const divContainer = document.createElement("div")
-    divContainer.setAttribute("class", "container")
-
-    const divCard = document.createElement("div")
-    divCard.setAttribute("class", "card")
-
-    const img = document.createElement("img")
-    img.src = dish.strMealThumb
-
-    const divDetails = document.createElement("div")
-    divDetails.setAttribute("class", "details")
-
-    const divName = document.createElement("div")
-    divName.setAttribute("class", "name")
-    divName.textContent = dish.strMeal
-
-    const recipeButton = document.createElement("button")
-    recipeButton.setAttribute("id", "recipe")
-    recipeButton.textContent = "Recipe"
-
-    divDetails.append(divName, recipeButton)
-    divCard.append(img, divDetails)
-    divContainer.append(divCard)
-
-    li.append(divContainer)
-    const dishList = document.querySelector("#dish-list")
-    dishList.append(li)
-
-    const dishClick = document.getElementById("dish-list");
-    dishClick.addEventListener('click', handleDishClick);
-   
-
-  })
+  renderDishes(e);
 
 }
 
-const handleDishClick = (e) => {
-  e.target.src; 
+const handleDishClick = async (e) => {
+renderDetails(e)
   
 }
 
@@ -87,6 +42,13 @@ const main = () => {
 
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
+
+  const eachDishDetails= document.getElementById('dish-list'); 
+  eachDishDetails.addEventListener("click",handleDishClick );
+
+
+  renderDetails()
+  renderDishes()
 
 
   

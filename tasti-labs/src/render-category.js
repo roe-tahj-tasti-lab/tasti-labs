@@ -1,12 +1,47 @@
-// export const renderDishes = (dishlistEl, dishes) => {
-
-// //     dishlistEl.innerHTML = '';
-// //     dishes.forEach((dish) => {
-// //         const div = document.createElement('div');
-// //         const img = document.createElement('img');
-// //         const 
-
-
-// //     }
-// // 
-// }
+import { getCategoryDishes } from "./fetch-category";    
+    
+    
+    export const renderDishes = async(e) => {
+      const category = e.target.title; 
+      const { meals } = await getCategoryDishes(category)
+    
+      document.querySelector('#app').style.display = 'none' //clears
+    
+      const dishList = document.getElementById('meal-list')
+    
+    meals.forEach((dish) => {
+      const li = document.createElement('li');
+  
+      const divContainer = document.createElement("div")
+      divContainer.setAttribute("class", "container")
+  
+      const divCard = document.createElement("div")
+      divCard.setAttribute("class", "card")
+  
+      const img = document.createElement("img")
+      img.src = dish.strMealThumb
+  
+      const divDetails = document.createElement("div")
+      divDetails.setAttribute("class", "details")
+  
+      const divName = document.createElement("div")
+      divName.setAttribute("class", "name")
+      divName.textContent = dish.strMeal
+  
+      const recipeButton = document.createElement("button")
+      recipeButton.setAttribute("id", "recipe")
+      recipeButton.textContent = "Recipe"
+  
+      divDetails.append(divName, recipeButton)
+      divCard.append(img, divDetails)
+      divContainer.append(divCard)
+  
+      li.append(divContainer)
+      const dishList = document.querySelector("#dish-list")
+      dishList.append(li)
+  
+     
+     
+    
+    })
+  }
