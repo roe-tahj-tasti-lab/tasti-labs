@@ -29,17 +29,29 @@ const handleClick = async e => {
   const mealList = document.getElementById('meal-list')
 
   meals.forEach((meal) => {
-    const p = document.createElement('p').innerText = meal.strMeal
-    const img = document.createElement('img')
+    const ol = document.createElement('ol');
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    li.textContent =  meal.strMeal
     img.src = meal.strMealThumb
-    mealList.append(p, img)
+    ol.append(li)
+    mealList.append(ol, img,)
   })
 
+}
+
+const handleDishClick = (e) => {
+  const clickDish = e.target.strMealThumb; 
+  //not done 
 }
 
 const main = () => {
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
+
+   img.addEventListener('click', handleDishClick)
+  
+
 }
 
 main(); 
