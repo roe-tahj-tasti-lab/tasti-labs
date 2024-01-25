@@ -42,10 +42,6 @@ h1 {
   text-align: center;
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -62,6 +58,49 @@ ul {
   list-style-position: inside;
   margin-left: auto;
   margin-right: auto;
+}
+
+#dish-list li {
+  list-style-type: none;
+  text-align: center;
+  list-style-position: inside;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  height: 214px;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 300px;
+
+  /* Center the container in middle on horizontal axis */
+  margin: 0 auto;
+
+  /* Add empty space above the container (20% of the view height) */
+  margin-top: 20vh;
+}
+
+.card {
+  /* Change background color */
+  background-color: rgb(101, 92, 92);
+
+  /* Add border */
+  border: 1px solid #537b91;
+
+  /* Add space between the border and the content */
+  padding: 8px;
+
+  border-radius: 12px;
+}
+
+.card__details {
+  /* Add space around the details */
+  padding: 16px 8px 8px 8px;
 }
 
 button {
@@ -82,6 +121,25 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+button#recipe{
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+
+  /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+  margin: 0 auto;
+  display: block;
+
+  /* Button is a clickable element, therefore it should have a pointer cursor */
+  cursor: pointer;
+}
+button#recipe:hover {
+  transform: scale(1.2);
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -95,19 +153,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 
-  #dish-list {
-    list-style-type: none;
-    text-align: center;
-    list-style-position: inside;
-    display: flex;  
-    /* flex-direction: row; */
-    gap: 1em;
-    /* width: 300px; */
-    /* margin: 20px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden; */
-    }
 
 }
