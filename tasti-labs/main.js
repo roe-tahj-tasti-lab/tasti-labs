@@ -34,22 +34,53 @@ const handleClick = async e => {
 
   meals.forEach((dish) => {
     const li = document.createElement('li');
-    const h3 = document.createElement('h3')
-    const div = document.createElement('div')
-    const img = document.createElement('img');
-    const button = document.createElement('button')
 
-    button.textContent = 'Recipe'
-    h3.textContent =  dish.strMeal
+    const divContainer = document.createElement("div")
+    divContainer.setAttribute("class", "container")
+
+    const divCard = document.createElement("div")
+    divCard.setAttribute("class", "card")
+
+    const img = document.createElement("img")
     img.src = dish.strMealThumb
-    
-    li.append(div)
-    div.append(h3, img, button)
 
+    const divDetails = document.createElement("div")
+    divDetails.setAttribute("class", "details")
+
+    const divName = document.createElement("div")
+    divName.setAttribute("class", "name")
+    divName.textContent = dish.strMeal
+
+    const recipeButton = document.createElement("button")
+    recipeButton.setAttribute("id", "recipe")
+    recipeButton.textContent = "Recipe"
+
+    divDetails.append(divName, recipeButton)
+    divCard.append(img, divDetails)
+    divContainer.append(divCard)
+
+    li.append(divContainer)
     const dishList = document.querySelector("#dish-list")
     dishList.append(li)
 
-    img.addEventListener('click', handleDishClick);
+    // const li = document.createElement('li');
+    // const h3 = document.createElement('h3')
+    // const div = document.createElement('div')
+    // const img = document.createElement('img');
+    // const button = document.createElement('button')
+
+    // button.textContent = 'Recipe'
+    // h3.textContent =  dish.strMeal
+    // img.src = dish.strMealThumb
+    
+    // li.append(div)
+    // div.append(h3, img, button)
+
+    // const dishList = document.querySelector("#dish-list")
+    // dishList.append(li)
+
+    // img.addEventListener('click', handleDishClick);
+
   })
 
 }
