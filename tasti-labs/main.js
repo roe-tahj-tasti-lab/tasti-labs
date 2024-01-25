@@ -36,20 +36,22 @@ const handleClick = async e => {
     img.src = meal.strMealThumb
     ol.append(li)
     mealList.append(ol, img,)
+
+    img.addEventListener('click', handleDishClick)
   })
 
 }
 
 const handleDishClick = (e) => {
-  const clickDish = e.target.strMealThumb; 
-  //not done 
+  e.target.strMealThumb; 
+  
 }
 
 const main = () => {
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
 
-   img.addEventListener('click', handleDishClick)
+
   
 
 }
