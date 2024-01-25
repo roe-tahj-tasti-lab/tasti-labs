@@ -26,7 +26,7 @@ const handleClick = async e => {
 
   document.querySelector('#app').style.display = 'none' //clears
 
-  const mealList = document.getElementById('meal-list')
+  const dishList = document.getElementById('meal-list')
 
 
 
@@ -49,17 +49,25 @@ const handleClick = async e => {
     const dishList = document.querySelector("#dish-list")
     dishList.append(li)
 
-    img.addEventListener('click', handleDishClick);
+    const dishClick = document.getElementById("dish-list");
+    dishClick.addEventListener('click', handleDishClick);
   })
 
 }
 
 const handleDishClick = (e) => {
-  e.target.strMealThumb; 
+  e.target.src; 
   
 }
 
+
+
+
+
+
+
 const main = () => {
+
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
 
