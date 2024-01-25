@@ -24,20 +24,32 @@ const handleClick = async e => {
   const category = e.target.title; 
   const { meals } = await getCategoryDishes(category)
 
-  document.querySelector('#app').style.display = 'none'
+  document.querySelector('#app').style.display = 'none' //clears
 
   const mealList = document.getElementById('meal-list')
 
-  meals.forEach((meal) => {
-    const ol = document.createElement('ol');
-    const li = document.createElement('li');
-    const img = document.createElement('img');
-    li.textContent =  meal.strMeal
-    img.src = meal.strMealThumb
-    ol.append(li)
-    mealList.append(ol, img,)
 
-    img.addEventListener('click', handleDishClick)
+
+
+
+  meals.forEach((dish) => {
+    const li = document.createElement('li');
+    const h3 = document.createElement('h3')
+    const div = document.createElement('div')
+    const img = document.createElement('img');
+    const button = document.createElement('button')
+
+    button.textContent = 'Recipe'
+    h3.textContent =  dish.strMeal
+    img.src = dish.strMealThumb
+    
+    li.append(div)
+    div.append(h3, img, button)
+
+    const dishList = document.querySelector("#dish-list")
+    dishList.append(li)
+
+    img.addEventListener('click', handleDishClick);
   })
 
 }

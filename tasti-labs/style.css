@@ -94,4 +94,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  #dish-list {
+    list-style-type: none;
+    text-align: center;
+    list-style-position: inside;
+    display: flex;  
+    /* flex-direction: row; */
+    gap: 1em;
+    /* width: 300px; */
+    /* margin: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; */
+    }
+
 }
