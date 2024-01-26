@@ -30,7 +30,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
- flex-direction:column;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   min-width: 320px;
@@ -40,6 +40,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding-bottom: .5em;
 }
 
 #app {
@@ -62,6 +63,8 @@ ul {
 }
 
 #categories {
+  padding-left: 2em;
+  padding-right: 2em;
   padding-top: 2em;
 }
 
@@ -77,6 +80,7 @@ ul {
   padding-left: 2em;
   padding-right: 2em;
 }
+
 #dish-list li {
   list-style-type: none;
   text-align: center;
