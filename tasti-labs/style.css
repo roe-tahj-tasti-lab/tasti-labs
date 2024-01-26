@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,6 +38,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding-bottom: .5em;
 }
 
 #app {
@@ -52,12 +58,23 @@ ul {
   gap: 1em;
 }
 
+#categories {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+}
+
 #categories li {
   list-style-type: none;
   text-align: center;
   list-style-position: inside;
   margin-left: auto;
   margin-right: auto;
+}
+
+#dish-list {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 #dish-list li {
