@@ -136,6 +136,13 @@ img {
   padding: 16px 8px 8px 8px;
 }
 
+.border-button {
+  border: solid 5px #e5a75c;
+  transition: border-width 0.3s linear;
+}
+
+.border-button:hover { border-width: 10px; }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -157,11 +164,8 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-button#categories {
-  border: none;
-}
 button#categories:hover {
-  border: #213547;
+  border-color: #213547;
 }
 button#recipe {
   border: none;
