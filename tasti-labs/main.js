@@ -34,21 +34,18 @@ renderDetails(e)
 
 
 
-
-
-
-
 const main = () => {
 
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
 
-  const eachDishDetails= document.getElementById('dish-list'); 
+  const eachDishDetails = document.getElementById('recipe'); //this is the button Id that will trigger the recipe
   eachDishDetails.addEventListener("click",handleDishClick );
 
 
-  renderDetails()
-  renderDishes()
+
+getCategoryDishes()
+getDetails()
 
 
   

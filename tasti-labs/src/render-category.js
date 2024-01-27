@@ -7,7 +7,8 @@ import { getCategoryDishes } from "./fetch-category";
     
       document.querySelector('#app').style.display = 'none' //clears
     
-      const dishList = document.getElementById('meal-list')
+      const dishList = document.getElementById('meal-list')  
+      // appending to the dishes of the chosen category to meal list 
     
     meals.forEach((dish) => {
       const li = document.createElement('li');
