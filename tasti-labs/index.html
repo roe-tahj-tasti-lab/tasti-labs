@@ -7,17 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasti Labs</title>
   </head>
-  <body>
-    <div id="app"></div>
-
-    <!-- <h1>Tasti Labs</h1>
-    <h2>Categories</h2> -->
-    <div id="meal-list"></div>
-
-   <!-- <div id="dish-list"> -->
-   <ul id="dish-list"></ul>
-   </div>
-      
-        
+  <body>  
+    <div id="app">
+      <header>
+        <nav>
+          <h1>Logo</h1>
+          <ul id="nav-butt">
+            <li><button>Home</button></li>
+            <li><button>About</button></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="meal-list">
+            <h1>Tasti Labs</h2>
+            <h2>Are you craving...</h2>
+            <ul id="categories">
+              <li><button><img src="./index-images/chicken.png" alt="Chicken" title="Chicken"/></button></li>
+              <li><button><img src="./index-images/seafood.png" alt="Seafood" title="Seafood"/></button></li>
+              <li><button><img src="./index-images/pasta.png" alt="Pasta" title="Pasta"/></button></li>
+              <li><button><img src="./index-images/vegan.png" alt="Vegan" title="Vegan"/></button></li>
+              <li><button><img src="./index-images/dessert.png" alt="Dessert" title="Dessert"/></button></li>
+            </ul>
+        </div>
+        <div id="dishes">
+          <ul id="dish-list"></ul>
+        </div>
+      </main>
+    </div>      
   </body>
 </html>
