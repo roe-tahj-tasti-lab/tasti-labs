@@ -17,8 +17,8 @@ export const renderDetails = async () => {
   }
     const ingredientsList = document.createElement('ul')
     for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[`strIngredient${i}`];
-        const measurement = meal[`strMeasure${i}`];
+        const ingredient = meals[`strIngredient${i}`];
+        const measurement = meals[`strMeasure${i}`];
 
         if (ingredient && ingredient.trim() !== "") {
 
