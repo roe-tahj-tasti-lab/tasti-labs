@@ -14,19 +14,21 @@ export const renderDetails = async () => {
     h1.textContent = `${meal.strMeal}`;
     div.append(p)
 
-  }
+  })
+  
     const ingredientsList = document.createElement('ul')
     for (let i = 1; i <= 20; i++) {
         const ingredient = meals[`strIngredient${i}`];
         const measurement = meals[`strMeasure${i}`];
 
+    
         if (ingredient && ingredient.trim() !== "") {
 
             const listItem = document.createElement('li');
             listItem.textContent = `${ingredient}: ${measurement || 'N/A'}`;
             ingredientsList.append(listItem);
         }
-
+    }
 
     
     
@@ -34,6 +36,6 @@ export const renderDetails = async () => {
     recipieDetails.append(div);
 
 
-    }
-}
+ }
+
 
