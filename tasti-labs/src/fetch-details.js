@@ -8,4 +8,5 @@ export const getDetails = async (idMeal) => {
     catch(error){
         console.error(error.message)
     }
+
 }
