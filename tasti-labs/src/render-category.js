@@ -22,6 +22,7 @@ import { getCategoryDishes } from "./fetch-category";
   
       const img = document.createElement("img")
       img.src = dish.strMealThumb
+      img.width = "214px"
   
       const divDetails = document.createElement("div")
       divDetails.setAttribute("class", "details")
