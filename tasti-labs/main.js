@@ -4,7 +4,7 @@ import { getDetails } from './src/fetch-details';
 import { renderDishes } from './src/render-category';
 import { renderDetails } from './render-details';
 
-document.querySelector('#app').innerHTML = `
+document.querySelector('#meal-list').innerHTML = `
   <div>
     <h1>Tasti Labs</h2>
     <h2>Are you craving...</h2>
