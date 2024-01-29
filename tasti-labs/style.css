@@ -136,6 +136,10 @@ img {
   padding: 16px 8px 8px 8px;
 }
 
+#instructions>p {
+  margin-top: 1em;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -189,9 +193,9 @@ button#recipe:hover {
     background-color: #f9f9f9;
   }
 
-  ul#recipe-details {
+  /* ul#recipe-details {
    
-  }
+  } */
 
   h1#recipe-details {
     font-size: 24px;
