@@ -2,25 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="index-images/favicon.ico"/>
     <script type="module" src="/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasti Labs</title>
   </head>
   <header>
-    <img src="" alt="">
+    <img class="logo" src="index-images/logo.svg" alt="logo">
     <nav>
       <ul>
-        <li></li>
-        <li></li>
+        <li><button>( home )</button></li>
+        <li><button>( recipes )</button></li>
+        <li><button>( about )</button></li>
       </ul>
     </nav>
   </header>
   <body>
     <div id="app">
       <section id="types-of-meals" aria-labelledby="types-of-meals">
-        <h1></h1>
-        <div id="meal-list"></div>
+        <h1>Are you craving...</h1>
+        <div id="meal-list">
+            <ul id="categories">
+              <li><button><img src="./index-images/chicken.png" alt="Chicken" title="Chicken"/></button></li>
+              <li><button><img src="./index-images/seafood.png" alt="Seafood" title="Seafood"/></button></li>
+              <li><button><img src="./index-images/pasta.png" alt="Pasta" title="Pasta"/></button></li>
+              <li><button><img src="./index-images/vegan.png" alt="Vegan" title="Vegan"/></button></li>
+              <li><button><img src="./index-images/dessert.png" alt="Dessert" title="Dessert"/></button></li>
+            </ul> 
+        </div>
       </section>
       <section id="dishes" aria-labelledby="dishes">
         <h2></h2>
