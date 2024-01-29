@@ -2,6 +2,8 @@ import './style.css'
 import {getCategoryDishes} from './src/fetch-category'
 import { getDetails } from './src/fetch-details';
 import { renderDishes } from './src/render-category';
+import { renderDetails } from './render-details';
+
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Tasti Labs</h2>
@@ -15,9 +17,9 @@ document.querySelector('#app').innerHTML = `
     </ul> 
   </div>
 `
-//need to add eventListeners to the buttons
-//when a category button gets clicked
-//a fetch (defined in fetcher.js) will be made for the dishes of that category in category.js
+//*need to add eventListeners to the buttons
+//!when a category button gets clicked
+//?a fetch (defined in fetcher.js) will be made for the dishes of that category in category.js
 //and then category.html will render all the relevant data/properties for all those category 
 //dishes.
 
@@ -28,7 +30,9 @@ const handleClick = async e => {
 }
 
 const handleDishClick = async (e) => {
+
 renderDetails(e)
+
   
 }
 
@@ -39,8 +43,8 @@ const main = () => {
   const categoriesList = document.getElementById('categories'); 
   categoriesList.addEventListener("click", handleClick)
 
-  const eachDishDetails = document.getElementById('recipe'); //this is the button Id that will trigger the recipe
-  eachDishDetails.addEventListener("click",handleDishClick );
+  const eachDishDetails = document.getElementById('dish-list'); 
+  eachDishDetails.addEventListener("click", handleDishClick );
 
 
 
