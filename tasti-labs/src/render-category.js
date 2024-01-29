@@ -5,7 +5,7 @@ import { getCategoryDishes } from "./fetch-category";
       const category = e.target.title; 
       const { meals } = await getCategoryDishes(category)
     
-      document.querySelector('#app').style.display = 'none' 
+      document.querySelector('#meal-list').style.display = 'none' 
       //!clears the page once recipie is clicked on 
     
       const dishList = document.getElementById('meal-list')  
