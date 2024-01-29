@@ -136,6 +136,10 @@ img {
   padding: 16px 8px 8px 8px;
 }
 
+#instructions>p {
+  margin-top: 1em;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
