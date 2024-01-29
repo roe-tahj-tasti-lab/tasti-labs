@@ -189,5 +189,18 @@ button#recipe:hover {
     background-color: #f9f9f9;
   }
 
+  ul#recipe-details {
+   
+  }
+
+  h1#recipe-details {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
 
 }
