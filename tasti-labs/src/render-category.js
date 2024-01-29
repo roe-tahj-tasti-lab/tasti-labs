@@ -1,14 +1,15 @@
 import { getCategoryDishes } from "./fetch-category";    
     
     
-    export const renderDishes = async(e) => {
+  export const renderDishes = async(e) => {
       const category = e.target.title; 
       const { meals } = await getCategoryDishes(category)
     
-      document.querySelector('#app').style.display = 'none' //clears
+      document.querySelector('#app').style.display = 'none' 
+      //!clears the page once recipie is clicked on 
     
       const dishList = document.getElementById('meal-list')  
-      // appending to the dishes of the chosen category to meal list 
+      //! appending to the dishes of the chosen category to meal list 
     
     meals.forEach((dish) => {
       const li = document.createElement('li');
@@ -32,10 +33,12 @@ import { getCategoryDishes } from "./fetch-category";
       const recipeButton = document.createElement("button")
       recipeButton.setAttribute("id", "recipe")
       recipeButton.textContent = "Recipe"
+      recipeButton.dataset.id = dish.idMeal
   
       divDetails.append(divName, recipeButton)
       divCard.append(img, divDetails)
       divContainer.append(divCard)
+
   
       li.append(divContainer)
       const dishList = document.querySelector("#dish-list")
