@@ -13,7 +13,7 @@ export const renderDetails = async (e) => {
     const div = document.createElement('div');
     const p = document.createElement('p');
     const img = document.createElement('img');
-    const img2 = document.createElement('img')
+    // const img2 = document.createElement('img')
 
     
     p.textContent = `${dish.strInstructions}`;
@@ -25,6 +25,7 @@ export const renderDetails = async (e) => {
 // console.log(dish.strInstructions)
 
     const ingredientsList = document.createElement('ul')
+    ingredientsList.setAttribute('id', 'recipe-list');
     for (let i = 1; i <= 20; i++) {
         const ingredient = dish[`strIngredient${i}`];
         const measurement = dish[`strMeasure${i}`];
