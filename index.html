@@ -2,23 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tasti-labs/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/tasti-labs/assets/favicon-yjaV2GLS.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasti Labs</title>
-    <script type="module" crossorigin src="/tasti-labs/assets/index-A1Q9Nble.js"></script>
-    <link rel="stylesheet" crossorigin href="/tasti-labs/assets/index-sBhrnUJI.css">
+    <script type="module" crossorigin src="/tasti-labs/assets/index-Rlsl5PkO.js"></script>
+    <link rel="stylesheet" crossorigin href="/tasti-labs/assets/index-Ci0hvCUI.css">
   </head>
+  <header>
+    <img class="logo" src="/tasti-labs/assets/logo-4dAdLgy_.svg" alt="logo">
+    <nav>
+      <ul>
+        <li><button>( home )</button></li>
+        <li><button>( recipes )</button></li>
+        <li><button>( about )</button></li>
+      </ul>
+    </nav>
+  </header>
   <body>
-    <div id="app"></div>
-
-    <!-- <h1>Tasti Labs</h1>
-    <h2>Categories</h2> -->
-    <div id="meal-list"></div>
-
-   <!-- <div id="dish-list"> -->
-   <ul id="dish-list"></ul>
-   </div>
-      
-        
+    <div id="app">
+      <section id="types-of-meals" aria-labelledby="types-of-meals">
+        <h1>Are you craving...</h1>
+        <div id="meal-list">
+            <ul id="categories">
+              <li><button><img src="/tasti-labs/assets/chicken-H0MJveeH.png" alt="Chicken" title="Chicken"/></button></li>
+              <li><button><img src="/tasti-labs/assets/seafood-OwmC_Lwl.png" alt="Seafood" title="Seafood"/></button></li>
+              <li><button><img src="/tasti-labs/assets/pasta-BH2n8JhW.png" alt="Pasta" title="Pasta"/></button></li>
+              <li><button><img src="/tasti-labs/assets/vegan-QF33wJLK.png" alt="Vegan" title="Vegan"/></button></li>
+              <li><button><img src="/tasti-labs/assets/dessert-4YItcpAQ.png" alt="Dessert" title="Dessert"/></button></li>
+            </ul> 
+        </div>
+      </section>
+      <section id="dishes" aria-labelledby="dishes">
+        <h2></h2>
+        <div>
+          <ul id="dish-list"></ul>
+        </div>
+      </section>
+      <section id="recipe" aria-labelledby="recipe">
+        <h2></h2>
+        <div id="recipe-details"></div>
+      </section>
+    </div>
   </body>
 </html>
