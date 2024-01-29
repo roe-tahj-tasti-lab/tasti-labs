@@ -1,7 +1,8 @@
 import { getDetails } from "./src/fetch-details"
 
 export const renderDetails = async () => {
-    const meals = await getDetails(idMeal);
+  
+  const meals = await getDetails(idMeal);
 
 
   meals.forEach((meal) => {
@@ -16,24 +17,24 @@ export const renderDetails = async () => {
 
   })
   
-    const ingredientsList = document.createElement('ul')
-    for (let i = 1; i <= 20; i++) {
-        const ingredient = meals[`strIngredient${i}`];
-        const measurement = meals[`strMeasure${i}`];
+  const ingredientsList = document.createElement('ul')
+  for (let i = 1; i <= 20; i++) {
+      const ingredient = meals[`strIngredient${i}`];
+      const measurement = meals[`strMeasure${i}`];
+
+  
+      if (ingredient && ingredient.trim() !== "") {
+
+          const listItem = document.createElement('li');
+          listItem.textContent = `${ingredient}: ${measurement || 'N/A'}`;
+          ingredientsList.append(listItem);
+      }
+  }
 
     
-        if (ingredient && ingredient.trim() !== "") {
-
-            const listItem = document.createElement('li');
-            listItem.textContent = `${ingredient}: ${measurement || 'N/A'}`;
-            ingredientsList.append(listItem);
-        }
-    }
-
     
-    
-    const recipieDetails = document.getElementById('recipie-Details');
-    recipieDetails.append(div);
+  const recipieDetails = document.getElementById('recipie-Details');
+  recipieDetails.append(div);
 
 
  }
