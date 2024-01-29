@@ -2,6 +2,8 @@ import './style.css'
 import {getCategoryDishes} from './src/fetch-category'
 import { getDetails } from './src/fetch-details';
 import { renderDishes } from './src/render-category';
+import { renderDetails } from './render-details';
+
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Tasti Labs</h2>
@@ -28,7 +30,7 @@ const handleClick = async e => {
 }
 
 const handleDishClick = async (e) => {
-  console.log('hi')
+
 renderDetails(e)
 
   
