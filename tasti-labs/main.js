@@ -17,13 +17,8 @@ const handleClick = async e => {
 }
 
 const handleDishClick = async (e) => {
-
-renderDetails(e)
-
-  
+  renderDetails(e)
 }
-
-
 
 const main = () => {
 
@@ -33,13 +28,8 @@ const main = () => {
   const eachDishDetails = document.getElementById('dish-list'); 
   eachDishDetails.addEventListener("click", handleDishClick );
 
-
-
-getCategoryDishes()
-getDetails()
-
-
-  
+  getCategoryDishes()
+  getDetails()
 
 }
 

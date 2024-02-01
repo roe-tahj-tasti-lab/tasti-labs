@@ -5,16 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/tasti-labs/assets/favicon-yjaV2GLS.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasti Labs</title>
-    <script type="module" crossorigin src="/tasti-labs/assets/index-Rlsl5PkO.js"></script>
-    <link rel="stylesheet" crossorigin href="/tasti-labs/assets/index-Ci0hvCUI.css">
+    <script type="module" crossorigin src="/tasti-labs/assets/index-LsC9G3DB.js"></script>
+    <link rel="stylesheet" crossorigin href="/tasti-labs/assets/index-7RxoYFQk.css">
   </head>
   <header>
     <img class="logo" src="/tasti-labs/assets/logo-4dAdLgy_.svg" alt="logo">
     <nav>
       <ul>
-        <li><button>( home )</button></li>
-        <li><button>( recipes )</button></li>
-        <li><button>( about )</button></li>
+        
       </ul>
     </nav>
   </header>
@@ -33,13 +31,15 @@
         </div>
       </section>
       <section id="dishes" aria-labelledby="dishes">
-        <h2></h2>
-        <div>
+        <button id="back-to-home"></button>
+        <div id="dishes-displayed">
+          <h2 id="dish-type"></h2>
           <ul id="dish-list"></ul>
         </div>
       </section>
       <section id="recipe" aria-labelledby="recipe">
-        <h2></h2>
+        <button id="back-to-dish-type"></button>
+        <h2 id="recipe-name"></h2>
         <div id="recipe-details"></div>
       </section>
     </div>

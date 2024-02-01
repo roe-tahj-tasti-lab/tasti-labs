@@ -46,8 +46,6 @@ export const renderDetails = async (e) => {
     recipeDetails.append(div, h1, ingredientsList, div2);
 
     //?this is all the dom thats getting appened to the Id in the html 
-
-
  }
 
 

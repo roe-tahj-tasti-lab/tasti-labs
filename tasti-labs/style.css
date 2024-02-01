@@ -39,6 +39,14 @@ nav>ul>li>button:hover {
   text-decoration:underline;
 }
 
+#back-to-home {
+  display: none;
+}
+
+#back-to-dish-type {
+  display: none;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -60,10 +68,6 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 ul {
@@ -147,6 +151,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: black;
   background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;

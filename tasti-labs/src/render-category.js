@@ -1,15 +1,19 @@
 import { getCategoryDishes } from "./fetch-category";    
     
-    
+
   export const renderDishes = async(e) => {
-      const category = e.target.title; 
-      const { meals } = await getCategoryDishes(category)
+    const category = e.target.title; 
+    const { meals } = await getCategoryDishes(category)
+  
+    document.querySelector('#meal-list').style.display = 'none';
+    //!clears the page once recipie is clicked on 
+
+    const backButton = document.querySelector("#back-to-home");
+    backButton.style.display = "unset";
+    backButton.textContent = "Back";
     
-      document.querySelector('#meal-list').style.display = 'none' 
-      //!clears the page once recipie is clicked on 
-    
-      const dishList = document.getElementById('meal-list')  
-      //! appending to the dishes of the chosen category to meal list 
+    const dishList = document.getElementById('meal-list')  
+    //! appending to the dishes of the chosen category to meal list 
     
     meals.forEach((dish) => {
       const li = document.createElement('li');
@@ -40,13 +44,17 @@ import { getCategoryDishes } from "./fetch-category";
       divCard.append(img, divDetails)
       divContainer.append(divCard)
 
-  
       li.append(divContainer)
       const dishList = document.querySelector("#dish-list")
       dishList.append(li)
   
-     
-     
-    
+    })
+
+    backButton.addEventListener("click", (e) => {
+      console.log("hi")
+      document.querySelector("#dishes-displayed").style.display = 'none';
+      document.querySelector('#meal-list').style.display = 'unset';
+      backButton.style.display = "none";
+      
     })
   }
